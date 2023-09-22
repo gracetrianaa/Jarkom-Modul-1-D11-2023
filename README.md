@@ -34,6 +34,19 @@ d) Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari
 ![Soal1_Flag](https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/90684914/b3df8ff5-208c-4f04-af95-bf4bbdaf72a5)
 
 ## Soal Nomor 2
+Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer! `gunicorn`
+
+### Langkah-langkah
+- melakukan filter http di wireshark
+- Cari paket yang memiliki protokol http
+
+<img width="359" alt="nomor2" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/7f70ad9e-3bec-4c08-8a38-5e5bc53c9a60">
+
+
+### Bukti Flag
+
+<img width="323" alt="flag2" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/e553da18-247b-498b-9713-31d220f6b599">
+
 
 ## Soal Nomor 3
 Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
@@ -57,6 +70,19 @@ b) Protokol layer transport apa yang digunakan? `UDP`
 
 
 ## Soal Nomor 4
+Berapa nilai checksum yang didapat dari header pada paket nomor 130? `0x18e5`
+
+### Langkah-langkah
+- buka paket 130
+- liat checksum pada bagian User Datagram Protokol
+
+<img width="407" alt="nomor4" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/ab27e953-72ec-4a86-b0aa-2ff927cb1f8a">
+
+
+### Bukti Flag
+
+<img width="406" alt="flag4" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/7db55808-f87b-4690-8247-d1c2f6aa4e9c">
+
 
 ## Soal Nomor 5
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
@@ -83,6 +109,20 @@ c) Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP? 
 
 
 ## Soal Nomor 6
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+
+### Langkah-langkah
+- Subtitusi Source Address 7812
+- Lihat Address 7812
+
+karena melihat clue a1 e5 u21 maka dapat di simpulkan ini adalah enkripsi ”a1z26”. dengan mensubsitusi Source Address paket 7812 makan di dapatkan jawaban `JDRNJA`
+
+<img width="951" alt="nomor6" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/c140137a-4f31-4066-9373-91173c30c0f2">
+
+### Bukti Flag
+<img width="860" alt="flag6" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/4a7ee9c1-8895-4df1-9af8-3b2f4a9c5e91">
+
+
 
 ## Soal Nomor 7
 Berapa jumlah packet yang menuju IP 184.87.193.88?
@@ -110,5 +150,28 @@ Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yan
   
 ## Soal Nomor 9
 
-## Soal Nomor 10
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
 
+### Langkah-langkah
+- Menggunakan querry dengan syntax `ip.src ==  10.51.40.1 &&  ip.dst =!  10.39.55.34`
+
+### Bukti Flag
+<img width="409" alt="flag9" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/734671ea-21ae-42ee-8986-8c2a927cbd76">
+
+
+## Soal Nomor 10
+Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+### Langkah-langkah
+- Menggunakan filter dengan syntax telnet.data == "Login: "
+- klik kanan dan pilih option follow dan pilih TCP Stream
+- lihat username dan password yang tersedia.
+- username : `dhafin` dan password : `kesayangannyak0k0`
+
+<img width="953" alt="nomor10a" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/35090adf-bd93-4809-b8da-4ac976087110">
+
+<img width="950" alt="nomor10b" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/3110ab4e-5f15-4510-a79a-0b2a931302b8">
+
+### Bukti Flag
+
+<img width="408" alt="flag10" src="https://github.com/gracetrianaa/Jarkom-Modul-1-D11-2023/assets/130858750/56c40e4f-95a9-480a-834e-4dec290f37c2">
